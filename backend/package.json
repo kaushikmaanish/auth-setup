@@ -4,11 +4,12 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "npm rebuild better-sqlite3"
   },
   "engines": {
-  "node": "18.x"
-},
+    "node": "18.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
