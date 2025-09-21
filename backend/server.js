@@ -23,11 +23,11 @@ app.post('/me/notification', auth.authMiddleware, (req, res) => {
 });
 
 // Serve React frontend build
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Catch-all route to serve index.html for React routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
 const PORT = process.env.PORT || 4000;
