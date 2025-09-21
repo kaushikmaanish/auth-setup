@@ -8,6 +8,11 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Handling Get
+app.get('/', (req,res) => {
+  res.send("Welcome to the Auth Setup Project");
+});
+
 // Auth endpoints
 app.post('/auth/signup', auth.signup);
 app.post('/auth/signin', auth.signin);
